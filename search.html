@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="static/js/flexible.js"></script>
+	<title>智慧居家养老平台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="">
+	<link rel="icon" type="image/jpg" href="">
+	<link rel="stylesheet" href="static/css/iconfont.css" />
+	<link rel="stylesheet" href="static/css/shop.css" />
+
+</head>
+<body style="background:#FFFFFF;">
+	<div class="container pd">
+		<div class="header">
+			<div class="headL">
+				<a class="back iconfont" href="javascript:history.go(-1)">&#xe64f;</a>	
+			</div>
+			<div class="headC">
+				<form method="get" action="productlist.html" id="searchform" autocomplete="off" style="width: 100%;display: flex;align-items: center;">
+					<input type="search" autocomplete="off" id="idNumber" class="mui-SearchInput" name="keyword" placeholder="请搜索商品" onfocus="this.placeholder=''" onblur="this.placeholder='请搜索商品'">
+					<input type="button" id="search1" class="iconfont icon-search mui-SearchBtn middle">
+				</form>	
+			</div>
+		</div>
+		<h2 class="hotsearchtitle">热门搜索</h2>
+		<div class="history hot-word clearfix">
+			<div class="hotbox"></div>
+		</div>
+		<div class="history hot-change">换一批</div>
+		<h2 class="searchtitle">最近搜索</h2>
+		<div class="searchdelete history clearfix"></div>
+		<div class="history his-dele" id="his-dele">清除记录</div>
+	
+		<!--搜索关键词弹窗-->
+		<div class="key-box" id="keyBox">
+			<ul></ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script>
+		
+		$(function(){
+			$("html").css('height','100%');
+		})
+
+	</script>
+</body>
+</html>

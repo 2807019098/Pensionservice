@@ -1,0 +1,38 @@
+{
+    "lists":[{
+        "id": "1", 
+        "link": "productdetail2.html", 
+        "src": "images/item/item01.jpg", 
+        "name": "阿芙（AFU）玫瑰焕白亮肤礼盒5件套", 
+        "desc": "喜糖优选 多口味选择", 
+        "prix": "3699.00", 
+        "price": "2999.00"
+    }, 
+    {
+        "id": "2", 
+        "link": "productdetail.html", 
+        "src": "images/item/item02.jpg", 
+        "name": "来一份美级脆皮海鲜饼干套餐", 
+        "desc": "天然护肤 纯洁无瑕", 
+        "prix": "3699.00", 
+        "price": "2999.00"
+    }, 
+    {
+        "id": "3", 
+        "link": "productdetail.html", 
+        "src": "images/item/item03.jpg", 
+        "name": "燕麦多榛子下午茶套餐装", 
+        "desc": "喜糖优选 多口味选择", 
+        "prix": "3699.00", 
+        "price": "2999.00"
+    }, 
+    {
+        "id": "4", 
+        "link": "productdetail.html", 
+        "src": "images/item/item04.jpg", 
+        "name": "冠生园金典有机奶+宫廷茶", 
+        "desc": "天然护肤 纯洁无瑕", 
+        "prix": "3699.00", 
+        "price": "2999.00"
+    }]
+}

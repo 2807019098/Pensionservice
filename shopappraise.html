@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="static/js/flexible.js"></script>
+	<title>智慧居家养老平台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="">
+	<link rel="icon" type="image/jpg" href="">
+    <link rel="stylesheet" href="static/css/iconfont.css" />
+    <link rel="stylesheet" href="static/js/layui/css/layui.css" />
+	<link rel="stylesheet" href="static/css/main.css"/>
+</head>
+<body>
+	<div class="container scroll">
+		<header>
+			<a class="back iconfont" href="javascript:history.go(-1)">&#xe64f;</a>
+			<h2>商品评价</h2>
+		</header>
+		<div class="contentBox mt20">
+			<div class="shopGood">
+				<div class="shopGoodDown-tips">
+					<div class="shopGoodL">
+						<div class="goodsImg">
+							<img src="https://img10.360buyimg.com/n2/s240x240_jfs/t1/197570/20/17364/90553/6194b9b8Ef021c25f/3fe85d245b930780.jpg" />
+						</div>
+					</div>
+					<div class="shopGoodR">
+						<a href="productdetail.html" class="message-name">福东海 新会老陈皮100g 典藏礼罐装 约十五年 新会源产陈皮干 大红皮 茶叶花草茶泡水 精选老皮 送礼佳品</a>
+						<div class="mui-mark"><span class="mark-zt">满200减10</span></div>
+						<div class="info_price">
+							<div class="good-price">&yen;1190.00</div>
+							<span class="count">x1</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contentBox mt20">
+			<div class="inner_title">
+				<div class="inner_r">
+					<div class="starGrade" id="starGrade"></div>
+				</div>
+			</div>
+			<div class="inner_title">
+				<div class="inner_r">
+					请描述一下您的使用体验吧~
+				</div>
+			</div>
+			<div class="inner_title-s">
+				<div class="inner_r">
+					<div class="textarea" contenteditable="true" oninput="mood(this,5)"></div>
+				</div>
+			</div>
+			<div class="inner_title-s">
+		        <div class="upload-piclist">
+			       	<div class="upload-file">
+			           	<div class="upload-li">
+			           		<input type="file" id="file" accept="image/*" multiple onchange="imgChange()"/>
+			           	</div>	
+			       	</div>
+			    </div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="footer">
+				<a class="sub-btn-a ml20">发布</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="static/js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="static/js/layui/layui.js" ></script>
+	<script type="text/javascript" src="static/js/layer_mobile/layer.js"></script>
+	<script type="text/javascript" src="static/js/common.js" ></script>
+	<script>
+		layui.use(['rate'], function(){
+		  	var rate = layui.rate;				  
+		  	rate.render({
+			    elem: '#starGrade'
+			    ,value: 0.0
+			    ,half: true
+			    ,text: true
+			    ,setText: function(value){
+				    this.span.text(value.toFixed(1));
+				}
+		  	})
+
+		});
+		
+		function mood(res,vmax){
+			console.log($(res).text())
+		}
+		
+		let picmax = 9; //限制上传数量 
+		function imgChange() {
+			let file = document.getElementById('file').files;
+			let imglist = document.querySelectorAll('.upload-Picitem');
+			let piclist = document.getElementsByClassName('upload-piclist')[0];
+			let filelist = file.length + imglist.length > picmax ? 9 - imglist.length : file.length + imglist.length;
+			if (file.length + imglist.length >= 9) {
+				let uploadfile = document.getElementsByClassName('upload-file')[0]
+				uploadfile.style.display = "none"
+			}
+			for (let i = 0; i < filelist; i++) {
+				readerfile(file[i]).then(e => {
+					let html = document.createElement('div');
+					html.className = 'upload-Picitem'
+					html.innerHTML = '<img onclick="imgRemove(this)" src=' + e + ' alt="pic">'
+					piclist.append(html);
+				})
+			}
+		}
+		
+		function readerfile(file) {
+			return new Promise((resolve, reject) => {
+				let reader = new FileReader();
+				reader.addEventListener("load", function() {
+					resolve(reader.result);
+				}, false)
+				if (file) {
+					reader.readAsDataURL(file)
+				}
+			})
+		}
+		
+		function imgRemove(obj){
+			layer.open({
+				shadeClose: false, //禁止遮罩关闭
+				content:'<i class="iconfont" style="vertical-align: middle;font-size:1rem;color: #ff4500;">&#xe636;</i><p style="font-size: 0.28rem;text-align: center;">确定要删除这张图片吗？</p>',
+				btn:['删除','取消'],
+				no:function(){//取消
+					ModalHelper.beforeClose();
+				},
+				yes: function(index, layero){//确认
+					ModalHelper.beforeClose();
+					$(obj).parent().remove();
+					if( $('.upload-Picitem').length < 9){
+						$('.upload-file').show();
+					}
+	                layer.close(index); 	                
+				}
+			})
+		}
+		
+		
+	</script>
+</body>
+</html>

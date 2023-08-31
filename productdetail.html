@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+		<meta name="applicable-device" content="pc,mobile" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="X-UA-Compatible" content="edge">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="full-screen" content="yes">
+		<meta name="wap-font-scale" content="no">
+		<script src="js/flexible.js"></script>
+		<title>智慧居家养老平台</title>
+		<link rel="stylesheet" href="static/css/common.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/detail.css" />
+		<style>
+			.picbanner .swiper-pagination {
+				display: flex;
+			}
+			.picbanner .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+				margin: 0 2px!important;
+				border-radius: 5px!important;
+				width: 100%!important;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="container">			
+			<header class="headerItem mixFixed zkFlex" id="wineHead">
+				<div class="headListItem">
+					<a href="javascript:history.go(-1)" class="iconfont headIconPic" style="color:#222222 ;">&#xe64f;</a>
+					<h2 class="cateItemTitle" id="itemDetailTitle">
+						<span class="cateItem_active">商品</span>
+						<span class="cateItem_active">评论</span>
+						<span class="cateItem_active itemtarget">详情</span>
+					</h2>
+					<i class="iconfont cateItemTitleRight" onclick="onShare()">&#xe785;</i>
+				</div>
+			</header>
+			<div class="itemDetail">
+				<div class="itemCate">
+					<div class="floorscroll">
+						<div class="item-floor">
+							<div class="picbanner">
+								<div class="swiper-container gallery">
+									<div class="my-gallery swiper-wrapper">
+									    <div class="swiper-slide" onclick="bigImg(this)" data-src="https://image.shwexcs.com/ProductImg/L2_23122_1.png" style="background-image: url(https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/164058/38/21513/200856/6242dd71E17ab6fae/0ad83044690e53eb.jpg);">			
+											<img src="images/bg.png" style="opacity: 0;" />	    	
+									    </div>
+									    <div class="swiper-slide" onclick="bigImg(this)" data-src="https://image.shwexcs.com/ProductImg/L2_31230_1.png" style="background-image: url(https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/164058/38/21513/200856/6242dd71E17ab6fae/0ad83044690e53eb.jpg);">			
+									  		<img src="images/bg.png" style="opacity: 0;" />	
+									    </div>
+									    <div class="swiper-slide" onclick="bigImg(this)" data-src="https://image.shwexcs.com/ProductImg/L2_8555_1.png" style="background-image: url(https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/164058/38/21513/200856/6242dd71E17ab6fae/0ad83044690e53eb.jpg);">			
+										    <img src="images/bg.png" style="opacity: 0;" />	
+									    </div>
+									</div>	
+									<div class="tittup" id="tittup">
+										<span class="iteminner middle">
+											<span class="iteminnertxt">滑动查看详情</span>
+										</span>				
+									</div>
+									<div class="swiper-pagination"></div>
+								</div> 
+							</div>	
+							
+							<div class="itemBanner">
+								<div class="itemBannerRight">
+									<div class="itemBannerRightDown">
+										<div class="itemBannerCountsLeft">
+											<div class="itemBannerMessage">
+												<h2 class="item_name_zh">特雷斯酒庄勃艮第丘红葡萄酒</h2>
+											</div>
+											<div class="itemBannerCounts">
+												<h2>4.6</h2>
+												<h3>
+													<div class="itemBannerStars">
+														<div class="itemBannerStarsUL">
+															<ul class="star" style="width: 92%;">
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+															</ul>
+															<ul class="star_default">
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+																<li>★</li>
+															</ul>
+														</div>
+														<b></b>
+													</div>
+												</h3>
+											</div>
+											
+										</div>
+										<div class="itemBannerCountsRight">
+											<div class="itemBannerPrice">
+												<s>&yen;</s>318.00
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="itemWrap">
+								<div class="commentTitle">商品规格</div>
+								<div class="Ptable">
+									<table cellpadding="0" cellspacing="1" width="100%" border="0" class="param_table">
+										<tbody>
+											<tr>
+												<td class="tdTitle">商品名称</td>
+												<td>伊利</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">商品编号</td>
+												<td>5290144</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">商品毛重</td>
+												<td>3000g</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">商品产地</td>
+												<td>中国大陆</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">巧克力品类</td>
+												<td>牛奶巧克力</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">产品类别</td>
+												<td>休闲零食</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">保质期</td>
+												<td>450 天</td>
+											</tr>
+											<tr>
+												<td class="tdTitle">包装种类</td>
+												<td>袋装</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="floorscroll">
+						<div class="item-floor">
+							<div class="itemWrap">
+								<div class="commentTitle">精选评论</div>
+								<div class="commentPannel" id="list">
+									<div class="commentLi">
+										<a href="userinfo.html?name=慕" class="commentIcon">
+											<img src="static/images/comment_01.jpg" />
+										</a>
+										<div class="commentWrap">
+											<div class="commentName">
+												<span>慕</span>
+												<div class="commentDate">发布于 2020-03-31</div>
+											</div>
+											<div class="commentMarks">
+												<div class="commentStars">
+													<ul class="commentStarUl">
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+													</ul>
+													<ul class="commentStars_ul" style="width: 80%;">
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+													</ul>
+												</div>
+												<div class="marks_count">4.0</div>
+											</div>
+											<div class="commentInfo">
+												玛歌2004 温柔的霜糖黑莓香气下，藏的是凌厉的线条感，修长的、笔直的、干净的果味就像月光下的剪影，清晰且明亮。 圆润的酒体，轻盈像溪流飘过舌苔，留下细细的单宁和愉悦的果酸。 并不以强劲与浓郁，而以优雅与克制擅胜，使人暗暗记下恰好适饮的玛歌是如此好喝，远比好年份却不适饮的玛歌让人开心。 评分：92分
+											</div>
+											<div class="commentImg">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp">
+											</div>
+											<div class="commenthands">
+												<div class="commenthumbs" onclick="getThumbs(this)">
+													<i class="iconfont">&#xe67f;</i>
+													<span>2</span>
+												</div>
+												<div class="commenthtml" onclick="getComment()">
+													<i class="iconfont">&#xe677;</i>
+													<span>2</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="commentLi">
+										<a href="userinfo.html?name=睡着的水999" class="commentIcon">
+											<img src="static/images/comment_02.jpg" />
+										</a>
+										<div class="commentWrap">
+											<div class="commentName">
+												<span>睡着的水999</span>
+												<div class="commentDate">发布于 2019-07-15</div>
+											</div>
+											<div class="commentMarks">
+												<div class="commentStars">
+													<ul class="commentStarUl">
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+													</ul>
+													<ul class="commentStars_ul" style="width: 80%;">
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+														<li>★</li>
+													</ul>
+												</div>
+												<div class="marks_count">4.0</div>
+											</div>
+											<div class="commentInfo">
+												2013玛歌正牌，酒体中等清澈，红宝石色，共醒酒2个小时后感觉最佳，可以饮用，呈现出樱桃，草莓，雪松的香气，中等酸度，中等丹宁，丹宁入绵柔细腻，入口有橡木桶带来的香草味道，入口后有巧克力与矿石混合回味，易入口，回味长，酒体饱满，但不强劲，收尾干净，舒畅。
+											</div>
+											<div class="commentImg">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/130511/28/23909/478912/620c9c87Eb591c09a/013d8e8c3d754aae.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/167730/3/29061/264674/6245db61Eb5530cac/5a9f1cd071eea136.jpg!q70.dpg.webp">
+												<img class="list-img" onclick="bigImg(this)" data-src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/105952/25/25938/159711/624478aeEb494d2db/59d8e61a0c9adead.jpg!q70.dpg.webp">
+											</div>
+											<div class="commenthands">
+												<div class="commenthumbs" onclick="getThumbs(this)">
+													<i class="iconfont">&#xe67f;</i>
+													<span>2</span>
+												</div>
+												<div class="commenthtml" onclick="getComment()">
+													<i class="iconfont">&#xe677;</i>
+													<span>2</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="allComment">
+									<a id="allComment" onclick="openGradeList()">查看全部</a>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<!--图文详情-->				
+					<div class="floorscroll">
+						<div class="item-floor">
+							<div class="itemWrapImg">
+								<div class="commentImgTitle">图文详情</div>
+								<figure class="itemImg">
+									<img onclick="bigImg(this)" data-src="static/images/item01.jpg" src="static/images/item01.jpg" />
+									<img onclick="bigImg(this)" data-src="static/images/item02.jpg" src="static/images/item02.jpg" />
+									<img onclick="bigImg(this)" data-src="static/images/item03.jpg" src="static/images/item03.jpg" />
+								</figure>
+							</div>
+						</div>
+					</div>
+							
+				</div>
+				
+			</div>
+			<i class="totop iconfont" onclick="totop()">&#xe60f;</i>
+			<i class="scanGo iconfont">&#xe62c;</i>
+		
+			<div class="s-actionBar-container">
+		  		<div class="action-bar-wrap">
+		  			<a class="itemcart" href="shopcart.html">
+		  				<span class="cartitemcount">0</span><i class="iconfont"></i>
+		  			</a>
+		  			<a class="itemcollect">
+		  				<i class="iconfont mui-item-collect" data-text="收藏"></i>
+		  			</a>
+		  			<div class="trade">
+		  				<a class="buy">点我分享</a>
+		  				<a class="cartbox" onclick="addCart()">加入购物车</a>
+		  			</div>
+		  		</div>
+		  	</div>
+			
+		</div>
+		<template id="temp">
+			<div class="dialogBox" id="dialogBox" hide>
+				<div class="itemBox">
+					<div class="itemWarp">
+						<div class="itemWarpL">
+							<img id="imgGoods" loading="lazy" src="//img14.360buyimg.com/n4/jfs/t1/99488/15/43406/81106/64ee9d04Ff05b78f7/ca073a98b7d2a4cf.jpg" />
+						</div>
+						<div class="itemWarpR">
+							<h3><span>&yen; </span><b id="price">31</b></h3>
+						</div>
+					</div>
+					<div class="itemChild">
+						<div class="itemList">
+							<h3>
+								<b>颜色</b>
+								<span id="tips"></span>
+							</h3>
+							<div class="ul" id="itemUL">
+								<div class="li select" data-price="31" data-url="//img14.360buyimg.com/n4/jfs/t1/99488/15/43406/81106/64ee9d04Ff05b78f7/ca073a98b7d2a4cf.jpg">一次性马桶垫【可溶水250抽】</div>
+								<div class="li" data-price="21" data-url="//img14.360buyimg.com/n4/jfs/t1/204627/17/34097/69689/64ee9d02Fe2b08f9c/8afd2d5fb31943a9.jpg">一次性马桶垫60片独立包装</div>
+								<div class="li" data-price="25" data-url="//img14.360buyimg.com/n4/jfs/t1/169775/37/40867/47244/64ee9d07Ff798506a/475a1c5915e53a0b.jpg">一次性马桶垫40片独立装</div>
+								<div class="li" data-price="29" data-url="//img14.360buyimg.com/n4/jfs/t1/161583/15/40755/64670/64ee9d08F1d6097fc/d0f8327347138376.jpg">加长款马桶垫40片独立装</div>
+								<div class="li" data-price="39" data-url="//img14.360buyimg.com/n4/jfs/t1/172588/26/39556/84873/64ee9d08F4494e1e0/9c804e9bcdfc03af.jpg">升级加厚款马桶垫40片独立装</div>
+								<div class="li" data-price="149" data-url="//img14.360buyimg.com/n4/jfs/t1/219884/36/35990/97772/64ee9d02F4c57bdf0/a23af32be70ec877.jpg">升级安全锁扣坐便椅</div>
+								<div class="li" data-price="179" data-url="//img14.360buyimg.com/n4/jfs/t1/218017/40/33589/97332/64ee9d02Fa0a3be3c/c91bff95d255161e.jpg">升级安全锁扣坐便椅【5档调节】</div>
+								<div class="li" data-price="229" data-url="//img14.360buyimg.com/n4/jfs/t1/192488/39/36926/99503/64ee9d02F17df4053/fd7d597dfeba80e6.jpg">升级安全锁扣不锈钢坐便椅</div>
+								<div class="li" data-price="259" data-url="//img14.360buyimg.com/n4/jfs/t1/159233/22/40792/91140/64ee9d02F602c4313/55d54eff226c3b94.jpg">升级安全锁扣不锈钢坐便椅调节款</div>
+								<div class="li" data-price="199" data-url="//img14.360buyimg.com/n4/jfs/t1/111943/6/39787/101925/64ee9d02Ff0aab7e4/d0f0d314185b09d8.jpg">升级不锈钢调节脚坐便椅</div>
+								<div class="li" data-price="399" data-url="//img14.360buyimg.com/n4/jfs/t1/123748/23/40164/74085/64ee9d09Fae1fdbe5/65711eee876812b7.jpg">升级防滑折叠坐便椅【5档调节】</div>
+								<div class="li" data-price="599" data-url="//img14.360buyimg.com/n4/jfs/t1/151086/30/40062/62482/64ee9d0cF6b982aed/f7a1358bc007aa85.jpg">铝合金折叠坐便椅【5档调节】</div>
+								<div class="li" data-price="169" data-url="//img14.360buyimg.com/n4/jfs/t1/204075/11/33654/108161/64ee9d04F70a54332/3ad718b5437e2b1f.jpg">移动马桶【双桶+房厕两用】</div>
+								<div class="li" data-price="129" data-url="//img14.360buyimg.com/n4/jfs/t1/223029/28/26211/96844/64ee9d02F2334d1d2/28568692e4de0f18.jpg">手提式移动马桶【双桶】</div>
+								<div class="li" data-price="299" data-url="//img14.360buyimg.com/n4/jfs/t1/133912/7/39787/92493/64ee9d06F7ec5368b/410f869271ef30bb.jpg">移动马桶【双桶+增强防滑】</div>
+								<div class="li" data-price="199" data-url="//img14.360buyimg.com/n4/jfs/t1/204139/32/34054/113559/64ee9d02F53acc0fd/4a4fd64bc340c988.jpg">加宽太师椅【卧室蹲厕两用款】</div>
+								<div class="li" data-price="199" data-url="//img14.360buyimg.com/n4/jfs/t1/111758/29/36966/102218/64ee9d02Ff59cc036/7c6c93f2ddf0719f.jpg">移动马桶【人体工学设计+双桶】</div>
+								<div class="li" data-price="399" data-url="//img14.360buyimg.com/n4/jfs/t1/94416/4/41243/65184/64ee9d08Fc436be44/291fc65f197fe295.jpg">加强防滑抽拉凳+室内桶+蹲厕桶</div>
+								<div class="li" data-price="599" data-url="//img14.360buyimg.com/n4/jfs/t1/109054/10/43794/119188/64ee9d08F1efc908e/77bbf161de613058.jpg">折叠靠背抽拉凳+室内桶+蹲厕桶</div>
+								<div class="li" data-price="599" data-url="//img14.360buyimg.com/n4/jfs/t1/180837/16/37772/111585/64ee9d09F7838c27d/1eed50a1c5f885fe.jpg">大象腿款可升降+室内桶+蹲厕桶</div>
+								<div class="li" data-price="499" data-url="//img14.360buyimg.com/n4/jfs/t1/195127/34/36940/74966/64ee9d0dFb07cab22/53dd1cfe17acda73.jpg">PU软垫可升降+室内桶+蹲厕桶</div>
+								<div class="li" data-price="499" data-url="//img14.360buyimg.com/n4/jfs/t1/188805/39/36638/120452/64ee9d0aF248e8b19/a477a79225824f41.jpg">升级款折叠洗澡椅</div>
+								<div class="li" data-price="269" data-url="//img14.360buyimg.com/n4/jfs/t1/172051/14/39926/108707/64ee9d09F5262e808/b3a6d4ce8a8cdae2.jpg">加厚款床边扶手【适用99%床型】</div>
+								<div class="li" data-price="99" data-url="//img14.360buyimg.com/n4/jfs/t1/104063/16/44125/70041/64ee9d05F8f3f0de4/d426583d167933d0.jpg">U型翻身辅助器【高密度海绵】</div>
+								<div class="li" data-price="49" data-url="//img14.360buyimg.com/n4/jfs/t1/177427/39/41835/41161/64ee9d01F7cc004ac/fe32923b49769e7d.jpg">卧床坐便神器【亲肤防冻座套】</div>
+								<div class="li" data-price="39" data-url="//img14.360buyimg.com/n4/jfs/t1/206943/23/25451/114038/64ee9d05Fbac9e704/e0145878e0b3fdf7.jpg">马桶垫脚凳【加厚双层防滑】</div>
+								<div class="li" data-price="49" data-url="//img14.360buyimg.com/n4/jfs/t1/168029/21/39357/65139/64ee9d09Fc95eced4/25dac91fb56fded0.jpg">马桶折叠脚凳【灰白色】</div>
+								<div class="li" data-price="25" data-url="//img14.360buyimg.com/n4/jfs/t1/109302/6/44876/126041/64ee9d07F897cc8f8/3d23e6954332282e.jpg">家装马桶【装修必备】</div>
+							</div>
+						</div>
+						<div class="itemList">
+							<h3>
+								<b>数量</b>
+								<div class="cartBox">
+									<div class="cartContent">
+										<div class="minus select" id="minus"></div>
+										<input type="number" id="goodsNum" value="1" class="goods-num">
+										<div class="plus" id="plus"></div>
+									</div>
+								</div>
+							</h3>
+						</div>
+					</div>
+					<div class="itemBottom">
+						<div class="itemChilds">
+							<div class="cart-btn" id="addCart">加入购物车</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+	
+		<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="static/js/swiper.min.js"></script>
+		<script type="text/javascript" src="static/js/layui/layui.js" ></script>
+		<script type="text/javascript" src="static/js/common.js"></script>
+		
+		<script>
+
+			//轮播图
+	        var client=$(document.body)[0].clientWidth;    
+	        var galleryTop = new Swiper('.picbanner .swiper-container', {
+		        pagination: '.picbanner .swiper-pagination',
+//  			paginationType: 'fraction',
+				onTouchEnd: function(swiper){
+			        dis=client*($('.my-gallery .swiper-slide').length-1)+70
+			        TR=swiper.translate
+			        if(TR<-dis){
+				        swiper.setWrapperTranslate(TR);
+				        $(".itemtarget").trigger('click');
+			        }
+			    }
+		    });
+			
+			$(function() {
+				
+				var objitem = new floor('#wineHead .cateItem_active','.floorscroll');
+				objitem.init()
+				
+				$(window).on('scroll',function() {
+					var v=($(this).scrollTop())/100;
+					$('#wineHead').css('background-color','rgba(255, 255, 255,'+v+')');
+					$('#itemDetailTitle').css('color','rgba(153, 153, 153,'+v+')');
+					$('#itemDetailTitle .currentitem').css("border-bottom","2px solid rgba(153,153,153,"+v+")");
+				})
+				
+				var TouchNav = new Swiper('#TouchNav', {
+					freeMode: false,
+					freeModeMomentumRatio: 0.5,
+					slidesPerView: 'auto',
+					onInit: function(swiper){
+						var H = $(".fall-box").eq(swiper.clickedIndex).height();
+						$("#TouchInfo .swiper-slide.swiper-slide-active").css('height', H + 'px');
+						$("#TouchInfo .swiper-wrapper").css('height', H + 'px');
+					},
+					onTap: function(swiper){
+						TouchNav.setWrapperTransition(300);
+						$("#TouchNav .active").removeClass('active');
+						$("#TouchNav .swiper-slide").eq(swiper.clickedIndex).addClass('active');
+						TouchInfo.slideTo(swiper.clickedIndex);
+					}
+				});
+				
+				var TouchInfo = new Swiper('#TouchInfo', {
+					freeMode: false,
+					freeModeMomentumRatio: 0.5,
+					slidesPerView: 'auto',
+					onInit: function(e){
+						var H = $(".fall-box").eq(e.activeIndex).height();
+						$("#TouchInfo .swiper-slide.swiper-slide-active").css('height', H + 'px');
+						$("#TouchInfo .swiper-wrapper").css('height', H + 'px');
+					},
+					onSlideChangeEnd: function(e){
+						$("#TouchNav .active").removeClass('active');
+						$("#TouchNav .swiper-slide").eq(e.activeIndex).addClass('active');
+						TouchNav.slideTo(e.activeIndex);
+						var H = $(".fall-box").eq(e.activeIndex).height();
+						$("#TouchInfo .swiper-slide.swiper-slide-active").css('height', H + 'px');
+						$("#TouchInfo .swiper-wrapper").css('height', H + 'px');
+					}
+				});
+				
+				layui.use(['upload', 'element', 'layer'], function(){
+					var $ = layui.jquery
+					,upload = layui.upload
+					,element = layui.element
+					,layer = layui.layer;
+					upload.render({
+				    elem: '#layui-btn'
+					    ,url: '' //此处配置你自己的上传接口即可
+					    ,multiple: true
+					    ,before: function(obj){
+					    	obj.preview(function(index, file, result){
+					        	$('#layui-upload-list').append('<div class="layui-upload-warp"><i onclick="delgradeItemImg(this)" class="iconfont">&#xe62d;</i><img style="width: '+($(window).width()-40)*1/3+'px;height: '+($(window).width()-40)*1/3+'px;" src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img"></div>')
+					      	});
+					    }
+					    ,done: function(res){
+					      //上传完毕
+					    }
+				  	});
+				})	
+				
+				
+				//详情底部加入购物车
+				// $('.cartbox').click(function(){
+				// 	var num = $(".cartitemcount").html();//获取数量 
+			    // 	$(".cartitemcount").html(num*1+1); 
+			    // 	Elastic("ElasticClass","<i class=\"iconfont\" style=\"vertical-align: middle;margin-right:0.1rem;\">&#xe640;</i>成功加入购物车",2000);
+				// })
+				
+				//详情底部加入收藏
+				// $('.mui-item-collect').click(function(){
+				// 	var followButton = $(this);
+				// 		if (followButton.hasClass("following")){       
+			    //         followButton.removeClass("following");       
+			    //         followButton.html('&#xe623;');
+			    //         followButton.css({'font-size':'0.4rem','color':'#606060'});
+			    //         followButton.attr('data-text','收藏');
+			    //     }else{
+			    //         followButton.addClass("following");  
+			    //         followButton.html('&#xe602;'); 
+			    //         followButton.css({'font-size':'0.4rem','color':'#FA4A66'});
+			    //         followButton.attr('data-text','已收藏');
+			    //     }
+				// })
+			
+			})
+			
+			function floor(fixedevery,louceng) {
+			    this.fixedevery = fixedevery;
+			    this.louceng = louceng;
+			}
+			
+			floor.prototype = {
+			    init: function () {
+			        var that = this;
+			        that.start();
+			        this.fixedeveryClick();
+			    },
+			    start: function () {
+			        var that = this;
+			        $(window).on('scroll',function(){
+			            var winH=$(window).height();
+			            var iTop = $(window).scrollTop() || window.pageYOffset;//鼠标滚动的距离			            
+			            var header=$("header").height();
+			            var v = $(window).scrollTop()/100;
+			            if(iTop>header){
+			                $(that.louceng).each(function(){
+			                    if(winH+iTop - $(this).offset().top>winH/2){			  
+			                        $(that.fixedevery).removeClass('currentitem').css("border-bottom","0");
+			                        $(that.fixedevery).eq($(this).index()).addClass('currentitem').css("border-bottom","1px solid rgba(255,255,255,"+v+")");			                    	
+			                    }
+			                })
+			                
+			            }
+			            
+			        });
+			        $(window).on('load',function(){
+			            var winH=$(window).height();
+			            var iTop = $(window).scrollTop();//鼠标滚动的距离
+			            var header=$("#wineHead").height();
+			            if(iTop>0){
+			                $(that.louceng).each(function(){
+			                    if(winH+iTop - $(this).offset().top>winH/2){
+			                        $(that.fixedevery).removeClass('currentitem');
+			                        $(that.fixedevery).eq($(this).index()).addClass('currentitem');
+			                    }
+			                })
+			            }
+			            $('.headIconPic').css("color","#999999");
+			        });
+			    },
+			    fixedeveryClick: function () {
+			        var that = this;
+			        $(that.fixedevery).click(function(){
+			            var t = $(that.louceng).eq($(this).index()).offset().top - 50;
+			            $('body,html').animate({"scrollTop":t},500);
+			        });
+			
+			    }
+			
+			}
+			
+			
+			// 查看大图
+			function bigImg(res) {
+				var big_img = `<div class="big_img" onclick="closeDialogImg(this)">
+				    <div class="swiper-container2">
+				      <div class="swiper-wrapper"></div>
+				    </div>
+				    <div class="swiper-pagination2"></div>				    
+				</div>`;
+				$("body").append(big_img);
+				var mySwiper = new Swiper('.swiper-container2', {
+					loop: false,
+					pagination: '.swiper-pagination2',
+					paginationType: 'fraction'
+				});
+				var imgSrc = $(res).data("src");
+				var imgBox = $(res).parent().children();
+				var i = $(imgBox).index(res);
+				$(".big_img .swiper-wrapper").empty();
+				$(".big_img").css({
+					"z-index": 1001,
+					"opacity": "1",
+					"transition": "0.5s all ease-in"
+				});
+
+				for(var j = 0, c = imgBox.length; j < c; j++) {
+					$(".big_img .swiper-wrapper").append(`<div class="swiper-slide">
+		        		<div class="cell">
+		        			<img src=${imgBox.eq(j).data("src")} />
+		        		</div>
+	        		</div>`);
+					mySwiper.updateSlidesSize();
+					mySwiper.updatePagination();
+
+					$(".big_img .cell img").animate({
+						width: $(window).width()
+					}, 500)
+					mySwiper.slideTo(i, 0, false);
+
+				}
+
+				return false;
+			}
+
+			// 关闭大图
+			function closeDialogImg(res) {
+				$(".big_img .cell img").animate({
+					width: 0
+				}, 500)
+				$(".big_img").css({
+					"z-index": "-1",
+					"opacity": "0",
+					"transition": "0.5s all ease-in"
+				});
+				setTimeout(()=>{					
+					$(res).remove();
+				},500)
+			}
+			
+			//添加评论
+			function addComment(res){
+				$.modal({
+				  	title: "添加评论",
+				  	text: `<div class="textarea" id="addComment" contenteditable="true"></div>`,
+				  	buttons: [
+				    	{ 
+				    		text: "取消", className: "default", onClick: function(){
+				    
+				    		} 
+				    	},
+				    	{	text: "保存", onClick: function(){ 
+				    			$(res).text($("#addComment").text());
+				    		} 
+				    	}
+				  ]
+				});
+			}
+			
+			
+			function getComment(){
+				window.location.href='gradeItem.html'
+			}
+			//打开评价列表
+			function openGradeList(){
+				window.location.href='communityList.html'
+			}
+			
+			//点评详情
+			function toGrade(){
+				window.history.pushState("", "", "#gradeItem");
+				$("#grade-item").animate({
+					left: 0
+				}, 300);
+				layui.use(['rate'], function(){
+				  	var rate = layui.rate;				  
+				  	rate.render({
+					    elem: '#starGrade'
+					    ,value: 0.0
+					    ,half: true
+					    ,text: true
+					    ,setText: function(value){
+						    this.span.text(value.toFixed(1));
+						}
+				  	})
+
+				});
+				
+			}
+			
+			//关闭点评详情
+			function colseToGrade() {
+				$("#grade-item").animate({
+					left: '100%'
+				}, 300);
+			}
+			
+			//点赞
+			function getThumbs(res){
+				var num = $(res).children('span').text();
+				var followButton = $(res);
+				if(followButton.hasClass("following")) {
+					followButton.removeClass("following");
+					$(res).children('i').html("&#xe67f;");
+					num--;
+					$(res).children('span').text(num);
+				} else {
+					followButton.addClass("following");
+					$(res).children('i').html("&#xe67e;");
+					num++;
+					$(res).children('span').text(num);
+				}
+				
+			}
+					
+			
+		</script>
+		<script>
+
+			const addCart = () => {
+				openDialog();
+			};
+
+			(() => {
+				const template = document.querySelector("#temp");
+				if (template) {
+					const clone = template.content.cloneNode(true);
+					const dialogBox = document.querySelector("body");
+					if (dialogBox) {
+						dialogBox.style.height = '100vh'
+						dialogBox.appendChild(clone);
+					}
+				}
+			})();
+
+			const dialogBox = document.querySelector("#dialogBox");
+
+			dialogBox.addEventListener('click', function() {
+				closeDialog();
+			});
+
+			dialogBox.firstElementChild.addEventListener('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+			});
+
+			const openDialog = () => {
+				const dialogBox = document.querySelector("#dialogBox");
+				setTimeout(() => {
+					dialogBox.removeAttribute('hide');
+					dialogBox.setAttribute('show', '');
+				}, 100)
+				dialogBox.firstElementChild.classList.add('dialogshow');
+				dialogBox.firstElementChild.classList.remove('dialoghide');
+				document.body.classList.add('disOverflow');
+				document.querySelector('html').classList.add('disOverflow');
+			};
+
+			const closeDialog = () => {
+				const dialogBox = document.querySelector("#dialogBox");
+				dialogBox.firstElementChild.classList.remove('dialogshow');
+				dialogBox.firstElementChild.classList.add('dialoghide');
+				setTimeout(() => {
+					dialogBox.setAttribute('hide', '');
+					dialogBox.removeAttribute('show');
+				}, 800)
+				document.body.classList.remove('disOverflow');
+				document.querySelector('html').classList.remove('disOverflow');
+			};
+
+			const itemUL = document.querySelectorAll("#itemUL .li");
+
+			itemUL.forEach(function (element) {
+				element.addEventListener('click', function () {
+					element.classList.toggle('select');
+					$(element).siblings().removeClass('select');
+					changeGoods(element);
+					const tips = document.querySelector("#tips");
+					if (element.classList.contains('select')) {
+						tips.textContent = "";
+					} else {
+						tips.textContent = "请选择颜色";
+					}
+				})
+			});
+
+			const changeGoods = (element) => {
+				const imgGoods = document.querySelector("#imgGoods");
+				const price = document.querySelector("#price");
+				imgGoods.src = element.getAttribute("data-url");
+				price.textContent = element.getAttribute("data-price");
+			};
+
+			const minus = document.querySelector("#minus");
+			const plus = document.querySelector("#plus");
+			const goodsNum = document.querySelector("#goodsNum");
+
+			minus.addEventListener('click', function () {
+				if (goodsNum.value > 1) {
+					goodsNum.value--;
+					minus.classList.remove('select');
+				} 
+				if (goodsNum.value == 1) {
+					minus.classList.add('select');
+				}
+			});
+
+			plus.addEventListener('click', function () {
+				goodsNum.value++;
+				if (goodsNum.value > 1) {
+					minus.classList.remove('select');
+				}
+			});
+
+			const addCartBtn = document.querySelector("#addCart");
+
+			addCartBtn.addEventListener('click', function () {
+				const selectedLi = document.querySelector("#itemUL .li.select");
+
+				if (selectedLi) {
+					let text = `总价：${countPrice()}\n单价：${selectedLi.getAttribute("data-price")}\n数量：${goodsNum.value}\n规格：${selectedLi.textContent}`;
+					alert(text)
+					closeDialog();
+				} else {
+					Elastic("ElasticClass","<i class=\"iconfont\" style=\"vertical-align: middle;margin-right:0.1rem;\">&#xe614;</i>请选择颜色",1000);
+				}
+			});
+
+			const countPrice = () => {
+				const selectedLi = document.querySelector("#itemUL .li.select");
+				if (selectedLi) {
+					return parseFloat(selectedLi.getAttribute("data-price")*goodsNum.value);
+				}
+				return null;
+			};
+
+			const getPrice = (price) => {
+				let countsPrice = parseFloat(price);
+				return countsPrice
+			};
+
+		</script>
+	</body>
+
+</html>

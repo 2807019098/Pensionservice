@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>智慧居家养老平台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="">
+	<link rel="icon" type="image/jpg" href="">
+	<link rel="stylesheet" href="css/iconfont.css"/>
+	<link rel="stylesheet" href="css/base.css"/>
+
+</head>
+<body>
+	<div class="container">
+		<header class="headerUser">
+			<div class="hederHomeBanner">
+				<a href="javascript:history.go(-1)" class="iconfont headIconPic">&#xe65f;</a>    			
+    			<h2>编辑地址</h2>
+    		</div>
+		</header>
+		<ul class="addressul">
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">收货人</span>
+					</div>
+					<div class="flex-item areaitem">
+						<input class="addressinput" type="text" placeholder="请填写收货人" onfocus="this.placeholder=''" onblur="this.placeholder='请填写收货人'"/>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">手机号码</span>
+					</div>
+					<div class="flex-item areaitem">
+						<input class="addressinput" type="text" value="188****888" placeholder="请填写手机号码" onfocus="this.placeholder=''" onblur="this.placeholder='请填写手机号码'"/>
+					</div>
+			 	</div>
+			</li>
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">图形验证码</span>
+					</div>
+					<div class="flex-item areaitem">
+						<input class="addressinput" type="text" id="imgcode" value="" name="imgcode" placeholder="图形验证码" onfocus="this.placeholder=''" onblur="this.placeholder='图形验证码'"/>
+					</div>
+					<div class="flex-cell align-center">
+						<img class="ValidateCodePic" style="margin-left: 0.25rem;" src="images/ValidateCode.gif">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">短信验证码</span>
+					</div>
+					<div class="flex-item areaitem">
+						<input class="addressinput" type="text" id="sms" value="" name="sms" placeholder="短信验证码" onfocus="this.placeholder=''" onblur="this.placeholder='短信验证码'"/>
+					</div>
+					<div class="flex-cell align-center">
+						<button type="button" class="btnSendCode" id="SendCode">获取验证码</button>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">所在地区</span>
+					</div>
+					<div class="flex-item areaitem">
+						<input type="text" class="cell-input" readonly id="J_Address" value="上海市 徐汇区 城区" placeholder="请选择收货地址">
+					</div>
+					<div class="flex-cell align-center">
+						<i class="iconfont righttip">&#xe613;</i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="box order-address">
+					<div class="flex-cell align-center">
+						<span class="addresslabel">详细地址</span>
+					</div>
+					<div class="flex areaitem">
+						<textarea class="detailedaddress" name="" placeholder="请填写详细地址" onfocus="this.placeholder=''" onblur="this.placeholder='请填写详细地址'"></textarea>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="align-center flex-wrap order-address">
+					<div class="flex-item">
+						<label class="addresscheck">
+			                <input type="checkbox" name="addresscheck">
+			                <i class="icon-addresscheck"></i><span>设为默认收货地址</span>
+						</label>
+					</div>
+					<div class="flex-cell align-center">
+						<input class="saveaddressbtn" type="button" value="保存" data-url="deliveryaddress.html"/>
+					</div>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+	<script type="text/javascript" src="js/ydui.js" ></script>
+	<script type="text/javascript" src="js/area.citys.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+
+	<script>
+		!function () {
+	        var $target = $('#J_Address');
+	
+//	        $target.citySelect();
+			//设置默认城市
+			$target.citySelect({
+	            provance: '上海市',
+	            city: '徐汇区',
+	            area: '城区'
+	        });
+	
+	        $target.on('click', function (event) {
+	            event.stopPropagation();
+	            $target.citySelect('open');
+	        });
+	
+	        $target.on('done.ydui.cityselect', function (ret) {
+	            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+	        });
+	    }();
+
+		
+		//短信验证码
+
+		var $InterValObj; //timer变量，控制时间
+		var $count = 60; //间隔函数，1秒执行
+		var $curCount;//当前剩余秒数
+		var $code = ""; //验证码
+		var $codeLength = 6;//验证码长度
+		function SendInfo() {
+			$curCount = $count;
+			//产生验证码
+			for (var i = 0; i < $codeLength; i++) {
+				$code += parseInt(Math.random() * 9).toString();
+			}
+			//设置button效果，开始计时
+			$("#SendCode").attr("disabled", "true");
+			$("#SendCode").text( + $curCount + "秒后再获取");
+			$InterValObj = window.setInterval(SetResetTime, 1000); //启动计时器，1秒执行一次
+		}		
+		//timer处理函数
+		function SetResetTime() {
+			if ($curCount == 0) {                
+				window.clearInterval($InterValObj);//停止计时器
+				$("#SendCode").removeAttr("disabled");//启用按钮
+				$("#SendCode").text("获取验证码");
+				$code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效    
+			}else {
+				$curCount--;
+				$("#SendCode").text( + $curCount + "秒再获取");
+			}
+		}
+		
+		$("#SendCode").click(function(){
+			var phone = $("#phone").val();//手机号
+			var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(16[6]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[8-9]{1}))+\d{8})$/;
+			if(phone==""){
+				layer.open({
+		        	type: 0,
+		        	content: '请输入手机号!',
+				    skin: 'msg',
+				    time: 2
+		      	})
+				return false;
+			}else if(!phonereg.test(phone)){
+				layer.open({
+		        	type: 0,
+		        	content: '手机号格式错误,请重新输入!',
+				    skin: 'msg',
+				    time: 2
+		        })
+				return false;
+			}else{
+				SendInfo()
+			}
+		})
+	</script>
+</body>
+</html>
